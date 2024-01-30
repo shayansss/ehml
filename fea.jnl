@@ -1,0 +1,16 @@
+# Save by user on 2024_01_30-14.56.30; build 2021.HF4 2020_11_25-20.39.27 167889
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Simple_3D-withEQ'].steps['LOAD'].setValues(minInc=1e-08)
+# Save by user on 2024_01_30-18.07.35; build 2021.HF4 2020_11_25-20.39.27 167889
