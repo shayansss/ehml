@@ -1,2 +1,2 @@
-# HIRL: Hybrid inductive representation learning
+# EHML: Extended hybrid machine learning
 Under development
