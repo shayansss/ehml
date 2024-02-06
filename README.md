@@ -1,2 +1,2 @@
 # EHML: Extended hybrid machine learning
-Under development
+Documentation will be updated soon ...
