@@ -29,5 +29,5 @@ def create_tfrecord(modelName = 'Simple_3D', dataSetName='gnn_datasets'):
         arrayFiles[k].close()
         os.remove(path_fn(k+'.npy'))
 
-create_tfrecord()
-create_tfrecord('knee')
+create_tfrecord() # small-scale dataset
+create_tfrecord('knee') # # large-scale dataset
