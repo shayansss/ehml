@@ -30,4 +30,4 @@ def create_tfrecord(modelName = 'Simple_3D', dataSetName='gnn_datasets'):
         os.remove(path_fn(k+'.npy'))
 
 create_tfrecord() # small-scale dataset
-create_tfrecord('knee') # # large-scale dataset
+create_tfrecord('knee') # large-scale dataset
