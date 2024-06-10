@@ -1,5 +1,5 @@
 # EHML: Extended Hybrid Machine Learning
-This repository is dedicated to the implementation of the EHM algorithm as outlined in our manuscript currently under review. It also pertains to the fifth chapter of my PhD dissertation. EHML stands for Extended Hybrid Machine Learning, representing a novel, straightforward, multi-fidelity, and multiscale surrogate modeling technique. This technique facilitates both graph-based few-shot learning and zero-shot generalization in the context of knee cartilage biomechanics. Our investigation revealed that data augmentation plays a pivotal role in the performance of this model.
+This repository is dedicated to the implementation of the EHML algorithm as outlined in our manuscript currently under review. It also pertains to the fifth chapter of my PhD dissertation. EHML stands for Extended Hybrid Machine Learning, representing a novel, straightforward, multi-fidelity, and multiscale surrogate modeling technique. This technique facilitates both graph-based few-shot learning and zero-shot generalization in the context of knee cartilage biomechanics. Our investigation revealed that data augmentation plays a pivotal role in the performance of this model.
 
 ## Hardware and Software Requirements
 - A standard CPU suffices for our experiments, although the code is compatible with GPU-based training as well.
