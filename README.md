@@ -1,6 +1,19 @@
 # EHML: Extended Hybrid Machine Learning
 This repository contains the implementation of the EHML algorithm as outlined in our recently accepted <a href="https://doi.org/10.1109/ACCESS.2024.3416872" target="_blank">journal paper</a>. It also pertains to the fifth chapter of my PhD dissertation. EHML stands for Extended Hybrid Machine Learning, representing a novel, straightforward, multi-fidelity, and multiscale surrogate modeling technique. This technique facilitates both graph-based few-shot learning and zero-shot generalization in the context of knee cartilage biomechanics. Our investigation revealed that data augmentation plays a pivotal role in the performance of this model.
 
+## Citation
+If this research data is useful for your work, kindly please consider citing our work ([DOI](http://doi.org/10.1109/ACCESS.2024.3416872) | [PDF](https://www.biomech.tugraz.at/images/pdf/Sajjadinia_et_al-IEEE_Access-in-press.pdf)):
+
+```
+@ARTICLE{Sajjadinia2024c,
+  author={Sajjadinia, Seyed Shayan and Carpentieri, Bruno and Holzapfel, Gerhard A.},
+  journal={IEEE Access}, 
+  title={Bridging Diverse Physics and Scales of Knee Cartilage with Efficient and Augmented Graph Learning}, 
+  year={2024},
+  doi={10.1109/ACCESS.2024.3416872}
+}
+```
+
 ## Hardware and Software Requirements
 - A standard CPU suffices for our experiments, although the code is compatible with GPU-based training as well.
 - Abaqus 2021 is essential for FEA (Finite Element Analysis), alongside Visual Studio 2019 and Intel® Parallel Studio XE 2020 for running Fortran subroutines.
