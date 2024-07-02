@@ -1,5 +1,5 @@
 # EHML: Extended Hybrid Machine Learning
-This repository contains the implementation of the EHML algorithm as outlined in our recently accepted paper, entitled "<a href="https://doi.org/10.1109/ACCESS.2024.3416872" target="_blank">Bridging Diverse Physics and Scales of Knee Cartilage with Efficient and Augmented Graph Learning</a>". It also pertains to the fifth chapter of my PhD dissertation. EHML stands for Extended Hybrid Machine Learning, representing a novel, straightforward, multi-fidelity, and multiscale surrogate modeling technique. This technique facilitates both graph-based few-shot learning and zero-shot generalization in the context of knee cartilage biomechanics. Our investigation revealed that data augmentation plays a pivotal role in the performance of this model.
+This repository contains the implementation of the EHML algorithm as outlined in our recently accepted paper, entitled "<a href="https://shayansss.github.io/files/2024_06_b.pdf" target="_blank">Bridging Diverse Physics and Scales of Knee Cartilage with Efficient and Augmented Graph Learning</a>". It also pertains to the fifth chapter of my PhD dissertation. EHML stands for Extended Hybrid Machine Learning, representing a novel, straightforward, multi-fidelity, and multiscale surrogate modeling technique. This technique facilitates both graph-based few-shot learning and zero-shot generalization in the context of knee cartilage biomechanics. Our investigation revealed that data augmentation plays a pivotal role in the performance of this model.
 
 ## Citation
 If this research data is useful for your work, kindly please consider citing our work ([DOI](http://doi.org/10.1109/ACCESS.2024.3416872) | [PDF](https://www.biomech.tugraz.at/images/pdf/Sajjadinia_et_al-IEEE_Access-in-press.pdf)):
@@ -10,6 +10,8 @@ If this research data is useful for your work, kindly please consider citing our
   journal={IEEE Access}, 
   title={Bridging Diverse Physics and Scales of Knee Cartilage with Efficient and Augmented Graph Learning}, 
   year={2024},
+  volume={12},
+  pages={86302-86318},
   doi={10.1109/ACCESS.2024.3416872}
 }
 ```
@@ -23,7 +25,7 @@ If this research data is useful for your work, kindly please consider citing our
 Start by downloading and extracting the contents of the repository. Next, unzip `fea.zip`, which contains the Abaqus CAE file. Place this file and related FEA files, including `fea_core.py`, `2d_fea.py`, `3d_fea.py`, and `subroutines.for`, in its assumed default directory `C:\Temp\DA`. This directory is presumed to be within the default working directory of Abaqus (`C:\Temp`). The code frequently references this path, so any deviations from this directory structure necessitate corresponding updates in the code references. Python and Jupyter Notebook files, along with their dependent libraries, can be installed in any location, typically using a package manager like Conda.
 
 ## Dataset Generation
-The dataset generation process involves scripts like `2d_fea.py` and `3d_fea.py`, which are directly executable within Abaqus. These scripts also generate necessary runtimes and metadata for subsequent data preparation. Finally, execute `tfrecorde_conversion.py` to convert these data into TFRecord files, which will be subsequently utilized by TensorFlow for modeling and analysis.
+The dataset generation process is run within Abaqus by `2d_fea.py` and `3d_fea.py`. These scripts also generate necessary runtimes and metadata for subsequent data preparation. Finally, execute `tfrecorde_conversion.py` to convert these data into TFRecord files, which will be subsequently utilized by TensorFlow for modeling and analysis.
 
 ## Experiment Workflow and Expected Results
 The experimental process begins with data collection and preprocessing, which is handled by the `transformation.ipynb` notebook. This notebook not only performs the necessary transformations but also analyzes the impact of these transformations on the data. Once preprocessing is complete, initiate the experiments using `run_experiment.py`. This script orchestrates the training process and stores the resultant models. Post-training, these models are loaded back into `experiments.ipynb` for evaluation. This evaluation includes analyzing results and generating data for Abaqus integration. The `visualize_fea.py` script is then used within Abaqus to visualize pointwise errors on the numerical models. This visualization aids in comparing different experimental conditions and understanding the overall performance gain.
